@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.trafficLight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 150px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(#333, #555);
+}
+
+.light {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.active.red {
+    background-color: #FF4155;
+}
+
+.active.yellow {
+    background-color: #FFDC29;
+}
+
+.active.green {
+    background-color: #2ECC69;
+}
+
+.myButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #009688;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.myButton::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, #20B2d0, #FFA090, transparent);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.5;
+    transform: rotate(45deg);
+    animation: noise 1s infinite linear alternate-reverse;
+    transition: 0.6s;
+}
+
+.myButton:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 5px linear-gradient(#FFA090, #20B2d0);
+}
+
+@keyframes noise {
+    0% {
+        transform: rotate(45deg) translate(-50%, -50%);
+    }
+    100% {
+        transform: rotate(45deg) translate(50%, 50%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        height: 200px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    article {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+}

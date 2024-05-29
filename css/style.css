@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'BBT';
+    src: url('../font/brush-blitz-two.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'UQB';
+    src: url('../font/ukij-qara-bold.ttf') format('truetype');
+}
+
+body {
+    font-family: "UQB", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8e8e7;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+.btn {
+    width: 130px;
+    height: 40px;
+    font-size: 1.1em;
+    cursor: pointer;
+    background-color: #171716;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+}
+
+.btn:hover {
+    border-radius: 5px;
+    transform: translateY(-10px);
+    box-shadow: 0 7px 0 -2px #007178,
+                0 15px 0 -4px #51d400,
+                0 16px 10px -3px #39a2db;
+}
+
+.btn:active {
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: 0 2px 0 -2px #007178,
+                0 8px 0 -4px #51d400,
+                0 12px 10px -3px #39a2db;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        height: 200px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    article {
+        width: 90%;
+        max-width: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+}
